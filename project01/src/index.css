@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes dash {
+  0% { stroke-dasharray: 0, 20; stroke-dashoffset: 0; }
+  50% { stroke-dasharray: 10, 10; stroke-dashoffset: -5; }
+  100% { stroke-dasharray: 20, 0; stroke-dashoffset: -10; }
+}
+
+@keyframes floating-points {
+  0% { transform: translateY(0); }
+  85% { opacity: 0; }
+  100% { transform: translateY(-55px); opacity: 0; }
+}
+
+/* Hide elements before GSAP kicks in to prevent FOUC */
+.reveal-target {
+  opacity: 0;
+  visibility: hidden;
+}
