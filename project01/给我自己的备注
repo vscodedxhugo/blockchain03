@@ -3,3 +3,62 @@
 已经部署到 
 https://1688blockchain.blogspot.com/2026/08/project01.html
 
+
+------------------------------------------------------------------------------------------------------------
+
+
+原本开发：
+已完成打包：
+[下载 aura-mvp-standalone.html](/Users/mrjky/Documents/Codex/2026-08-08/zhweg/outputs/aura-mvp-standalone.html)
+单一 HTML 文件，约 4.9 MB
+CSS、JavaScript、18 张图片、字体及图标均已内嵌
+可断网直接双击运行
+已验证 WebGL、滚动动画、图片和 Mainnet/Testnet 切换
+浏览器控制台无错误或警告
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+最后变成 用原有的图片link 才不会把文件变成 4.9mb:
+已重新制作 Blogger 专用精简版：
+
+下载 aura-mvp-blogger.html
+
+文件大小：433 KB
+比原来的 4.9 MB 减少约 91%
+已移除所有图片 Base64 数据
+18 张图片改用原有线上地址
+CSS、React、动画和图标程序仍包含在单个 HTML 内
+请在 Blogger 的“HTML 视图”粘贴此版本。这个版本需要联网显示图片，不再是完全离线版本。
+
+21:04
+
+
+
+
+Outputs
+
+Create a file or site
+
+Browser
+
+AURA — Cryptographic Truth
+
+AURA — Cryptographic Truth
+
+Sources
+
+
+Screenshot 2026-08-08 at 8.54.13 PM.png
+
+project01
+
+View all
+/Users/mrjky/Documents/Codex/2026-08-08/zhweg/outputs/aura-mvp-blogger.html
+Import data from Chrome
+Bring over your passwords and cookies to the built-in browser
+
