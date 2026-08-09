@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+.aura-source-body {
+  min-height: 100vh;
+}
+
+.aura-empty-source {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+:root {
+--paper: #f5f0e9;
+--ink: #171411;
+--muted: #7d7267;
+--taupe: #a67b4f;
+--panel: #eee5da;
+}
+body {
+margin: 0;
+font-family: "Manrope", sans-serif;
+background:
+radial-gradient(circle at 12% 16%, rgba(255, 255, 255, 0.82), transparent 30%),
+radial-gradient(circle at 82% 10%, rgba(221, 211, 198, 0.34), transparent 34%),
+var(--paper);
+color: var(--ink);
+-webkit-font-smoothing: antialiased;
+text-rendering: geometricPrecision;
+}
+.font-logo {
+font-family: "Cormorant Garamond", serif;
+}
+.font-display {
+font-family: "Newsreader", serif;
+}
+.premium-panel {
+border: 1px solid #d8c9b8;
+background: #eee5da;
+box-shadow:
+0 24px 64px rgba(42, 31, 22, 0.22),
+inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+.material-dot:nth-child(1) {
+background: radial-gradient(circle at 35% 25%, #e6dfd5, #bfb5aa);
+}
+.material-dot:nth-child(2) {
+background: linear-gradient(90deg, #786653, #b39a82, #705844);
+}
+.material-dot:nth-child(3) {
+background: radial-gradient(circle at 30% 20%, #333638, #111314);
+}
+.material-dot:nth-child(4) {
+background: radial-gradient(circle at 40% 20%, #d8ceb9, #a9967f);
+}
+.material-dot:nth-child(5) {
+background: linear-gradient(120deg, #6d452d, #b57b4d, #553722);
+}
+.material-dot:nth-child(6) {
+background: radial-gradient(circle at 35% 25%, #e1dcd5, #bdb5ac);
+}
+.z-35 {
+z-index: 35;
+}
+.z-55 {
+z-index: 55;
+}
+@media (max-width: 1023px) {
+.hero-side {
+min-height: auto !important;
+}
+.hero-image-frame {
+height: 640px !important;
+border-radius: 1.35rem !important;
+}
+.hero-visual-bleed {
+margin-right: 0 !important;
+}
+}
+@media (max-width: 640px) {
+.hero-image-frame {
+height: 560px !important;
+}
+}
+
+
+
+.reveal-on-scroll {
+opacity: 0;
+transform: translateY(30px);
+transition-property: opacity, transform;
+transition-duration: 1.2s;
+transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-on-scroll.animate-in {
+opacity: 1;
+transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+.reveal-on-scroll {
+transition: none;
+opacity: 1;
+transform: none;
+}
+}
+
