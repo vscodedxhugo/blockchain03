@@ -1,0 +1,353 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+.aura-source-body {
+  min-height: 100vh;
+}
+
+.aura-empty-source {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+body {
+font-family: "Inter", sans-serif;
+}
+/* Smooth glowing effects */
+.glow-text {
+text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
+.glass-card {
+background: rgba(10, 10, 10, 0.6);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5),
+0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+.glass-card:before {
+content: "";
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1px;
+background: linear-gradient(
+to bottom,
+rgba(255, 255, 255, 0.15),
+transparent
+);
+-webkit-mask: linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+/* Custom Scrollbar for terminal */
+.scrollbar-hide::-webkit-scrollbar {
+display: none;
+}
+
+
+
+.invisible { visibility: hidden !important; }
+
+
+
+.font-geist {
+font-family: "Geist", sans-serif !important;
+}
+
+
+
+.font-roboto {
+font-family: "Roboto", sans-serif !important;
+}
+
+
+
+.font-montserrat {
+font-family: "Montserrat", sans-serif !important;
+}
+
+
+
+.font-poppins {
+font-family: "Poppins", sans-serif !important;
+}
+
+
+
+.font-playfair {
+font-family: "Playfair Display", serif !important;
+}
+
+
+
+.font-instrument-serif {
+font-family: "Instrument Serif", serif !important;
+}
+
+
+
+.font-merriweather {
+font-family: "Merriweather", serif !important;
+}
+
+
+
+.font-bricolage {
+font-family: "Bricolage Grotesque", sans-serif !important;
+}
+
+
+
+.font-jakarta {
+font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+
+
+.font-manrope {
+font-family: "Manrope", sans-serif !important;
+}
+
+
+
+.font-space-grotesk {
+font-family: "Space Grotesk", sans-serif !important;
+}
+
+
+
+.font-work-sans {
+font-family: "Work Sans", sans-serif !important;
+}
+
+
+
+.font-pt-serif {
+font-family: "PT Serif", serif !important;
+}
+
+
+
+.font-geist-mono {
+font-family: "Geist Mono", monospace !important;
+}
+
+
+
+.font-space-mono {
+font-family: "Space Mono", monospace !important;
+}
+
+
+
+.font-quicksand {
+font-family: "Quicksand", sans-serif !important;
+}
+
+
+
+.font-nunito {
+font-family: "Nunito", sans-serif !important;
+}
+
+
+
+[style*="--border-gradient"]::before {
+content: "";
+position: absolute;
+inset: 0;
+padding: 1px;
+border-radius: var(--border-radius-before, inherit);
+-webkit-mask: linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+background: var(--border-gradient);
+pointer-events: none;
+}
+
+
+
+/*
+Sequence animation intro. Usage:
+1) Insert this code in the <head>
+2) Add to Tailwind Classes: [animation:animationIn_0.8s_ease-out_0.1s_both]
+*/
+@keyframes animationIn {
+0% {
+opacity: 0;
+transform: translateY(30px);
+filter: blur(8px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+filter: blur(0px);
+}
+}
+
+
+
+        @keyframes aura-float-1 {
+
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes aura-float-2 {
+
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(-8px);
+          }
+        }
+
+        @keyframes aura-float-3 {
+
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(-12px);
+          }
+        }
+
+        @keyframes aura-float-4 {
+
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(-6px);
+          }
+        }
+      
+
+
+          @keyframes cursor-move-path {
+
+            0%,
+            100% {
+              transform: translate(0, 0);
+            }
+
+            20% {
+              transform: translate(-20px, 15px);
+            }
+
+            45% {
+              transform: translate(-5px, 40px);
+            }
+
+            70% {
+              transform: translate(15px, 25px);
+            }
+          }
+        
+
+
+            @keyframes draw-chart-line {
+              0% { stroke-dashoffset: 1000; }
+              100% { stroke-dashoffset: 0; }
+            }
+            @keyframes fade-in-chart {
+              0% { opacity: 0; }
+              100% { opacity: 1; }
+            }
+            .animate-draw-line {
+              stroke-dasharray: 1000;
+              stroke-dashoffset: 1000;
+              animation: draw-chart-line 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            }
+            .animate-chart-fill {
+              opacity: 0;
+              animation: fade-in-chart 1.5s ease-out 0.5s forwards;
+            }
+          
+
+
+            @keyframes flow-line {
+              0% {
+                stroke-dashoffset: 1000;
+                opacity: 0;
+              }
+
+              10% {
+                opacity: 1;
+              }
+
+              90% {
+                opacity: 1;
+              }
+
+              100% {
+                stroke-dashoffset: 0;
+                opacity: 0;
+              }
+            }
+
+            .animate-flow-line {
+              stroke-dasharray: 200 800;
+              animation: flow-line 4s linear infinite;
+            }
+
+            /* Custom Glass Effect */
+            .glass-panel {
+              background: rgba(15, 15, 15, 0.6);
+              backdrop-filter: blur(12px);
+              border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .glass-panel:hover {
+              border-color: rgba(255, 255, 255, 0.1);
+              background: rgba(20, 20, 20, 0.8);
+            }
+          
+
+
+          @keyframes marquee-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+          }
+          @keyframes marquee-down {
+            0% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+          }
+          .animate-marquee-up {
+            animation: marquee-up 40s linear infinite;
+          }
+          .animate-marquee-down {
+            animation: marquee-down 40s linear infinite;
+          }
+        
