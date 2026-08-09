@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+.aura-source-body {
+  min-height: 100vh;
+}
+
+.aura-empty-source {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+body { font-family: 'Inter', sans-serif; }
+.font-serif-custom { font-family: 'Newsreader', serif; }
+/* Custom scrollbar hide */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+/* Marquee Animation */
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+animation: scroll 30s linear infinite;
+}
+.mask-gradient {
+mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+/* Progress Bar Animation (hero cards) */
+@keyframes progress {
+0% { width: 0%; }
+100% { width: 100%; }
+}
+.animate-progress-bar {
+animation: progress 4s linear infinite;
+}
+/* Stack Transitions */
+.card-stack-item {
+transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-active {
+opacity: 1;
+transform: translateY(0) scale(1);
+z-index: 20;
+filter: blur(0px);
+}
+.card-inactive {
+opacity: 0.4;
+transform: translateY(15px) scale(0.95);
+z-index: 10;
+filter: blur(1px);
+}
+/* New: Carousel progress animation */
+@keyframes carousel-progress {
+0% { width: 0%; }
+100% { width: 100%; }
+}
+.animate-carousel-progress {
+animation: carousel-progress 4s linear infinite;
+}
+
+
+
+[style*="--border-gradient"]::before {
+content: "";
+position: absolute;
+inset: 0;
+padding: 1px;
+border-radius: var(--border-radius-before, inherit);
+-webkit-mask: linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+background: var(--border-gradient);
+pointer-events: none;
+}
+
+
+/* 3D Transform utilities */
+.perspective-normal { perspective: 500px !important; }
+
+
+
+          .stack-card {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            position: absolute;
+            inset: 0;
+            transform-origin: center bottom;
+            backface-visibility: hidden;
+          }
+
+          .stack-card.active {
+            opacity: 1;
+            transform: scale(1) tranneutralY(0);
+            z-index: 30;
+            filter: grayscale(0%);
+          }
+
+          .stack-card.next {
+            opacity: 0.6;
+            transform: scale(0.96) tranneutralY(12px);
+            z-index: 20;
+            filter: grayscale(100%);
+          }
+
+          .stack-card.last {
+            opacity: 0.3;
+            transform: scale(0.92) tranneutralY(24px);
+            z-index: 10;
+            filter: grayscale(100%);
+          }
+
+          @keyframes progress-fill {
+            from {
+              width: 0%;
+            }
+
+            to {
+              width: 100%;
+            }
+          }
+
+          .active .progress-track .progress-fill {
+            animation: progress-fill 4000ms linear forwards;
+          }
+        
